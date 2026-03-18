@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ACM UMAP '26, Gothenburg, Sweden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- Bootstrap FIRST -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your site CSS AFTER Bootstrap so it can override -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+      :root { --box-max: 1000px; }
+
+	  body {
+            background-color: #f8f9fa;
+        }
+
+
+      .section-box {
+        max-width: var(--box-max);
+        margin-inline: auto;
+        padding: clamp(12px, 2vw, 30px);
+        background-color: rgb(254, 248, 248);
+      }
+
+      .section-box--plain {
+        background: transparent;
+      }
+	  
+
+      /* Headings scale nicely on small screens */
+      h2 { font-size: clamp(1.4rem, 3.8vw, 2rem); color: rgb(15, 89, 89); }
+      h3 { font-size: clamp(1.1rem, 3.4vw, 1.75rem); }
+      h4 { font-size: clamp(0.95rem, 2.6vw, 1.125rem); }
+
+      /* Avoid overflows */
+      h2, h3, h4 { word-break: break-word; }
+
+      /* Optional: soften paragraph width for readability */
+      .prose { max-width: 70ch; margin-inline: auto; text-align: justify; }
+
+      /* Remove old fixed widths */
+      .box1, .box { width: 100%; max-width: var(--box-max); margin-inline: auto; }
+
+      /* Author cards are centered and responsive */
+      
+
+      /* Space between sections */
+      .spacer { height: clamp(8px, 2vw, 20px); }
+
+      .tab-btn {
+        width: 170px;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: bold;
+        background-color: rgb(15, 89, 89);
+        color: white;
+        border: 2px solid rgb(15, 89, 89);
+      }
+
+      .tab-btn:hover {
+        background-color: rgb(10, 70, 70);
+        color: white;
+        border-color: rgb(10, 70, 70);
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div id="page-wrapper">
+      <!-- Navbar -->
+      
+      
+
+      <!-- Header text -->
+      <header class="container text-center my-4">
+        <h2 class="mb-2">ACM UMAP '26, Gothenburg, Sweden</h2>
+        <h3 class="mb-2 text-dark">Reproducibility of LLM-based Recommender Systems Research: Worrying Observations from an Initial Analysis</h3>
+        <h4 class="text-muted">
+          Additional material: Source code and Datasets.
+        </h4>
+      </header>
+
+      <!-- Authors -->
+      <section class="container my-4">
+			<div class="d-flex justify-content-center flex-wrap text-center">
+
+				<div class="col">
+				<div class="author">
+					<div class="name">Faisal Shehzad</div>
+					<div>
+					<a href="mailto:faisal.shehzad@aau.at" class="text-dark" style="text-decoration: none;">
+						faisal.shehzad@aau.at
+					</a>
+					</div>
+					<div class="affil text-dark">University of Klagenfurt, Austria</div>
+				</div>
+				</div>
+
+				<div class="col">
+				<div class="author">
+					<div class="name">Dietmar Jannach</div>
+					<div>
+					<a href="mailto:dietmar.jannach@aau.at" class="text-dark" style="text-decoration: none;">
+						dietmar.jannach@aau.at
+					</a>
+					</div>
+					<div class="affil text-dark">University of Klagenfurt, Austria</div>
+				</div>
+				</div>
+        
+			</div>
+		</section>
+
+    <section class="container my-3 text-center">
+  <div class="d-flex justify-content-center align-items-center flex-wrap gap-2" id="custom-links">
+    <a class="btn btn-outline-secondary tab-btn" href="index.html">Home</a>
+    <a class="btn btn-outline-secondary tab-btn" href="#" data-load="paper_analysis.html">Considered papers</a>
+    <!--<a class="btn btn-outline-secondary tab-btn" href="#" data-load="checkylist.html">Interactive checklist</a>-->
+  </div>
+</section>
+
+
+      <!-- Abstract-ish box -->
+      <section >
+		<div id="table-placeholder">
+        <p align="justify" class="container">
+			Large language models (LLMs) are disrupting recommender systems research and have become central 
+			to modern recommendation architectures. At the same time, LLMs introduce additional stochasticity 
+			and architectural complexity, exacerbating existing reproducibility challenges. 
+			In this study, we assess the reproducibility of recent LLM-based recommender systems research to 
+			highlight gaps in this rapidly evolving area. We define a set of LLM-specific reproducibility 
+			variables and systematically analyze a representative sample of 64 papers published at top-ranked 
+			conferences. Our findings reveal several concerns: while source code is shared in nearly two thirds
+			of the papers, none provides all the details required to fully reproduce the reported results. 
+			Fine-tuning strategies are for example used in 39 papers, yet only about 15% supply complete 
+			fine-tuning materials. Overall, we argue that the community should not overlook emerging reproducibility 
+			issues surrounding LLMs and should adopt more rigorous standards to ensure reliable progress.
+        <br> <br>
+
+		
+        Note: To avoid pointing out individual authors, we refrain from sharing the detailed
+		analysis of the considered papers on the GitHub. 
+		However, interested readers may request access to the full analysis via the <a href="https://zenodo.org/records/19049779">Zenodo platform</a>.
+        <br>
+		
+		<div class="mt-3 text-center">
+          <a href="https://github.com/Faisalse/LLM-reproducibility-audit_" class="icon brands fw-bold">GitHub: Python script to reproduce given figures in the paper</a>
+        </div>
+	
+		</p>
+        </div>                    		
+	</section>
+
+      
+    </div>
+
+    <!-- JS -->
+    <script>
+      // Solidify the page title on mobile (and guard against template scripts setting it to "undefined")
+      document.addEventListener('DOMContentLoaded', function () {
+        if (!document.title || document.title.toLowerCase() === 'undefined') {
+          document.title = "ACM RecSys ’25, Prague, Czech Republic";
+        }
+      });
+
+      // AJAX loader for secondary pages + make any tables responsive
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('table-placeholder');
+
+        document.querySelectorAll('a[data-load]').forEach(link => {
+          link.addEventListener('click', async (ev) => {
+            ev.preventDefault();
+            const file = link.getAttribute('data-load');
+            try {
+              container.innerHTML = '<div class="text-center py-4">Loading…</div>';
+              const res = await fetch(file, { cache: 'no-store' });
+              const html = await res.text();
+              container.innerHTML = html;
+
+              // Style any tables inside loaded HTML
+              container.querySelectorAll('table').forEach(tb => {
+                tb.classList.add('table', 'table-striped', 'table-sm');
+                // Wrap to enable horizontal scroll on small screens
+                const wrapper = document.createElement('div');
+                wrapper.className = 'table-responsive';
+                tb.parentNode.insertBefore(wrapper, tb);
+                wrapper.appendChild(tb);
+              });
+
+              // Smooth scroll to content on mobile
+              container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } catch (e) {
+              container.innerHTML = '<div class="alert alert-danger">Error loading content.</div>';
+              console.error(e);
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- Bootstrap JS (navbar toggler, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- (Optional) Remove legacy template JS that may override styles/title:
+         assets/js/jquery.min.js, jquery.dropotron.min.js, browser.min.js, breakpoints.min.js, util.js, main.js
+         If you keep them, ensure none rewrite document.title or nav behavior. -->
+  </body>
+</html>
