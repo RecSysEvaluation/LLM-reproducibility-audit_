@@ -11,7 +11,7 @@
 
 
 <p align="justify">This reproducibility package was prepared for the paper titled "Reproducibility of LLM-based Recommender Systems Research:
-Worrying Observations from an Initial Analysis" and submitted  to the ACM UMAP 2026.  For the uploaded picture, the credit goes to ChatGPT.</p>
+Worrying Observations from an Initial Analysis" and submitted  to ACM UMAP 2026 (LBR track).  For the uploaded picture, the credit goes to ChatGPT.</p>
 
 <p ></p>
 
